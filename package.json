@@ -2,7 +2,7 @@
   "name": "react-use-aggrid-enterprise",
   "description": "Hook based initialization of AG-Grid Enterprise",
   "repository": "https://github.com/mdornseif/react-use-aggrid-enterprise",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "MIT",
   "author": "Maximillian Dornseif",
   "main": "dist/index.js",
