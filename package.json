@@ -68,6 +68,7 @@
   "dependencies": {
     "@ag-grid-community/all-modules": "26.x.x",
     "@ag-grid-community/react": "26.x.x",
-    "@ag-grid-enterprise/all-modules": "26.x.x"
+    "@ag-grid-enterprise/all-modules": "26.x.x",
+    "mem": "^9.0.2"
   }
 }

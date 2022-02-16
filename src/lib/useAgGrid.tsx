@@ -23,20 +23,9 @@ import { SetFilterModule } from '@ag-grid-enterprise/set-filter'
 import { SideBarModule } from '@ag-grid-enterprise/side-bar'
 import { StatusBarModule } from '@ag-grid-enterprise/status-bar'
 import { useCallback, useState } from 'react'
+import mem from 'mem'
 import '@ag-grid-community/core/dist/styles/ag-grid.css';
 
-// @ts-ignore-error very compillation environment dependant
-let LICENSE: string|undefined= import.meta?.env?.VITE_AGGRID_LICENSE_KEY
-if(!LICENSE) {
-  try {
-    LICENSE = process?.env?.REACT_APP_AGGRID_LICENSE_KEY
-  } catch {}
-}
-if (!LICENSE) {
-  console.error('No license key found. Put it in .env as VITE_AGGRID_LICENSE_KEY or REACT_APP_AGGRID_LICENSE_KEY')
-}
-
-LicenseManager.setLicenseKey(LICENSE||'')
 ModuleRegistry.registerModules([
   ClientSideRowModelModule,
   ClipboardModule,
@@ -98,22 +87,31 @@ export const agGridDefaultOptions: GridOptions = {
     ],
   },
 }
+
+function _installLicense(license?: string): void {
+  if(license && license.length > 0) {
+   LicenseManager.setLicenseKey(license)
+  }
+}
+export const installLicense = mem(_installLicense, );
+
 export interface IGridApi {
   api?: GridApi
   columnApi?: ColumnApi
 }
 
-export function useAgGrid(): IGridApi & { onGridReady: (event: GridReadyEvent) => void } {
+export function useAgGrid(license?: string): IGridApi & { onGridReady: (event: GridReadyEvent) => void } {
   const [gridApi, setGridApi] = useState<IGridApi>({
     api: undefined,
     columnApi: undefined,
   })
-
   const onGridReady = useCallback((params) => {
     const { api, columnApi } = params
     setGridApi({ api, columnApi })
     setTimeout(() => api.sizeColumnsToFit(), 25)
-  }, [])
+  }, [setGridApi])
+  installLicense(license)
+  
 
   return {
     onGridReady,

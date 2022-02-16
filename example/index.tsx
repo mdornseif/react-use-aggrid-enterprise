@@ -19,10 +19,14 @@ const rowData = [
   { make: 'Porsche', model: 'Boxter', price: 72000 },
 ];
 
+const LICENSE: string|undefined= import.meta?.env?.VITE_AGGRID_LICENSE_KEY
+// for create-create=react-app
+// const LICENSE = process?.env?.REACT_APP_AGGRID_LICENSE_KEY
+
 const columnDefs = [{ field: 'make' }, { field: 'model' }, { field: 'price' }];
 
 const App = () => {
-  const { onGridReady, columnApi, api } = useAgGrid();
+  const { onGridReady, columnApi, api } = useAgGrid(LICENSE);
   const gridOptions: GridOptions = { ...agGridDefaultOptions };
   console.log(columnApi, api);
   return (
