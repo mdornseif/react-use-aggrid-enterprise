@@ -1,6 +1,7 @@
 # useAgGrid
 
-This makes it easy to use the AG-Grid API which is provided via something which is not "the react way".
+This makes it easy to use the [AG-Grid](https://www.ag-grid.com) API 
+which is provided via something which is not "the react way".
 It also provides some sensible defaults and can set the license key for you.
 
 Then something like this should provide you with an working with AG-Grid:
