@@ -4,9 +4,16 @@
   "repository": "https://github.com/mdornseif/react-use-aggrid-enterprise",
   "version": "2.0.1",
   "license": "MIT",
-  "author": "Maximillian Dornseif",
+  "author": "Dr. Maximillian Dornseif",
+  "homepage": "https://github.com/git@github.com:mdornseif/react-use-aggrid-enterprise",
+  
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/git@github.com:mdornseif/react-use-aggrid-enterprise.git"
+    },
+  
   "main": "dist/index.js",
-  "module": "dist/react-use-aggrid.esm.js",
+  "module": "dist/react-use-aggrid-enterprise.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
