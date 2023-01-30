@@ -28,7 +28,6 @@ jobs:
 
       - name: Install dependencies 📦
         # run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.NODE_AUTH_TOKEN }}" >> ~/.npmrc
-        env:
         run: yarn install --frozen-lockfile  --prefer-offline
 
       # - name: Lint
