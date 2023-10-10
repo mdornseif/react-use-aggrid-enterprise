@@ -1,7 +1,7 @@
 {
   "name": "react-use-aggrid-enterprise",
   "description": "Hook based initialization of AG-Grid Enterprise",
-  "version": "2.0.1",
+  "version": "27.0.2",
   "license": "MIT",
   "author": "Dr. Maximillian Dornseif",
   "homepage": "https://github.com/mdornseif/react-use-aggrid-enterprise",
@@ -37,8 +37,8 @@
     }
   },
   "prettier": {
-    "printWidth": 80,
-    "semi": true,
+    "printWidth": 110,
+    "semi": false,
     "singleQuote": true,
     "trailingComma": "es5"
   },
@@ -46,10 +46,10 @@
     "testEnvironment": "jsdom"
   },
   "peerDependencies": {
-    "react": ">=16"
+    "react": ">=17"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=16"
   },
   "size-limit": [
     {
