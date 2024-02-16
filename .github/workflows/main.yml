@@ -24,11 +24,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-          cache: 'yarn'
+          cache: 'npm'
 
       - name: Install dependencies 📦
         # run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.NODE_AUTH_TOKEN }}" >> ~/.npmrc
-        run: yarn install --frozen-lockfile  --prefer-offline
+        run: npm install 
 
       # - name: Lint
       #   run: yarn lint
@@ -38,7 +38,7 @@ jobs:
 
       - name: Build 🏗
         # run: yarn prepare
-        run: yarn build
+        run: npm run build
 
 
   release:
@@ -54,18 +54,18 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'yarn'
+          cache: 'npm'
           registry-url: https://npm.pkg.github.com
           always-auth: true
           scope: '@hudora'
     
       - name: Install dependencies 📦
         # run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.NODE_AUTH_TOKEN }}" >> ~/.npmrc
-        run: yarn install --frozen-lockfile  --prefer-offline
+        run: npm install
 
       - name: Build 🏗
         # run: yarn prepare
-        run: yarn build
+        run: npm run build
 
       - name: Release
         env:
