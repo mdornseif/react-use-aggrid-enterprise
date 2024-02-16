@@ -1,40 +1,40 @@
 {
   "name": "react-use-aggrid-enterprise",
+  "version": "29.0.0",
   "description": "Hook based initialization of AG-Grid Enterprise",
-  "version": "28.0.0",
-  "license": "MIT",
-  "author": "Dr. Maximillian Dornseif",
   "homepage": "https://github.com/mdornseif/react-use-aggrid-enterprise",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mdornseif/react-use-aggrid-enterprise.git"
   },
-  "release": {
-    "branches": [
-      "main",
-      "next"
-    ]
-  },
+  "license": "MIT",
+  "author": "Dr. Maximillian Dornseif",
   "main": "dist/index.js",
   "module": "dist/react-use-aggrid-enterprise.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "scripts": {
-    "analyze": "size-limit --why",
-    "build": "dts build",
+    "build": "tsc && vite build",
+    "dev": "vite",
     "lint": "dts lint",
-    "prepare": "dts build",
-    "size": "size-limit",
+    "prepare": "husky",
+    "preview": "vite preview",
     "start": "dts watch",
-    "test": "dts test --passWithNoTests"
+    "test": "TZ=utc vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:watch": "TZ=utc vitest watch",
+    "unimported": "npx unimported; npx findead src",
+    "update": "npx npm-check-updates --interactive"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "dts lint"
-    }
+  "lint-staged": {
+    "*{css,scss,md,markdown,json,yaml,yml,graphql,html}": "prettier -w",
+    "*{js,jsx,ts,tsx}": [
+      "prettier -w",
+      "npm run lint -- --fix"
+    ],
+    "package*json": "sort-package-json"
   },
   "prettier": {
     "printWidth": 110,
@@ -42,50 +42,68 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "jest": {
-    "testEnvironment": "jsdom"
+  "release": {
+    "branches": [
+      "main",
+      "master",
+      "next"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ]
+  },
+  "dependencies": {
+    "@ag-grid-community/client-side-row-model": "29.x.x",
+    "@ag-grid-community/core": "29.x.x",
+    "@ag-grid-community/csv-export": "29.x.x",
+    "@ag-grid-community/react": "29.x.x",
+    "@ag-grid-community/styles": "29.x.x",
+    "@ag-grid-enterprise/charts": "29.x.x",
+    "@ag-grid-enterprise/clipboard": "29.x.x",
+    "@ag-grid-enterprise/column-tool-panel": "29.x.x",
+    "@ag-grid-enterprise/core": "29.x.x",
+    "@ag-grid-enterprise/excel-export": "29.x.x",
+    "@ag-grid-enterprise/filter-tool-panel": "29.x.x",
+    "@ag-grid-enterprise/master-detail": "29.x.x",
+    "@ag-grid-enterprise/menu": "29.x.x",
+    "@ag-grid-enterprise/multi-filter": "29.x.x",
+    "@ag-grid-enterprise/range-selection": "29.x.x",
+    "@ag-grid-enterprise/rich-select": "29.x.x",
+    "@ag-grid-enterprise/row-grouping": "29.x.x",
+    "@ag-grid-enterprise/set-filter": "29.x.x",
+    "@ag-grid-enterprise/side-bar": "29.x.x",
+    "@ag-grid-enterprise/sparklines": "29.x.x",
+    "@ag-grid-enterprise/status-bar": "29.x.x",
+    "@ag-grid-enterprise/viewport-row-model": "29.x.x",
+    "mem": "^8.1.1"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.6",
+    "@semantic-release/npm": "^11.0.2",
+    "@semantic-release/release-notes-generator": "^12.1.0",
+    "@tsconfig/create-react-app": "^2.0.2",
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/react": ">=17",
+    "@types/react-dom": ">=17",
+    "dts-cli": "^2.0.4",
+    "husky": "^9.0.11",
+    "react": ">=17",
+    "react-dom": ">=17",
+    "tslib": "^2.3.1",
+    "typescript": "^5.3.3"
   },
   "peerDependencies": {
     "react": ">=17"
   },
   "engines": {
-    "node": ">=16"
-  },
-  "devDependencies": {
-    "@tsconfig/create-react-app": "^1.0.2",
-    "@tsconfig/recommended": "^1.0.1",
-    "@types/react": "^17.0.39",
-    "@types/react-dom": "^17.0.11",
-    "dts-cli": "^1.3.0",
-    "husky": "^7.0.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "tslib": "^2.3.1",
-    "typescript": "^4.5.5"
-  },
-  "dependencies": {
-    "@ag-grid-community/client-side-row-model": "28.x.x",
-    "@ag-grid-community/core": "28.x.x",
-    "@ag-grid-community/csv-export": "28.x.x",
-    "@ag-grid-community/react": "28.x.x",
-    "@ag-grid-community/styles": "28.x.x",
-    "@ag-grid-enterprise/charts": "28.x.x",
-    "@ag-grid-enterprise/clipboard": "28.x.x",
-    "@ag-grid-enterprise/column-tool-panel": "28.x.x",
-    "@ag-grid-enterprise/core": "28.x.x",
-    "@ag-grid-enterprise/excel-export": "28.x.x",
-    "@ag-grid-enterprise/filter-tool-panel": "28.x.x",
-    "@ag-grid-enterprise/master-detail": "28.x.x",
-    "@ag-grid-enterprise/menu": "28.x.x",
-    "@ag-grid-enterprise/multi-filter": "28.x.x",
-    "@ag-grid-enterprise/range-selection": "28.x.x",
-    "@ag-grid-enterprise/rich-select": "28.x.x",
-    "@ag-grid-enterprise/row-grouping": "28.x.x",
-    "@ag-grid-enterprise/set-filter": "28.x.x",
-    "@ag-grid-enterprise/side-bar": "28.x.x",
-    "@ag-grid-enterprise/sparklines": "28.x.x",
-    "@ag-grid-enterprise/status-bar": "28.x.x",
-    "@ag-grid-enterprise/viewport-row-model": "28.x.x",
-    "mem": "^8.1.1"
+    "node": ">=18"
   }
 }
