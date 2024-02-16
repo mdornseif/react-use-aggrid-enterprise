@@ -51,18 +51,7 @@
   "engines": {
     "node": ">=16"
   },
-  "size-limit": [
-    {
-      "path": "dist/react-use-aggrid.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/react-use-aggrid.esm.js",
-      "limit": "10 KB"
-    }
-  ],
   "devDependencies": {
-    "@size-limit/preset-small-lib": "^7.0.8",
     "@tsconfig/create-react-app": "^1.0.2",
     "@tsconfig/recommended": "^1.0.1",
     "@types/react": "^17.0.39",
@@ -71,31 +60,30 @@
     "husky": "^7.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "size-limit": "^7.0.8",
     "tslib": "^2.3.1",
     "typescript": "^4.5.5"
   },
   "dependencies": {
-    "@ag-grid-community/core": "28.x.x",
-    "@ag-grid-community/styles": "28.x.x",
     "@ag-grid-community/client-side-row-model": "28.x.x",
+    "@ag-grid-community/core": "28.x.x",
     "@ag-grid-community/csv-export": "28.x.x",
     "@ag-grid-community/react": "28.x.x",
-    "@ag-grid-enterprise/core": "28.x.x",
+    "@ag-grid-community/styles": "28.x.x",
     "@ag-grid-enterprise/charts": "28.x.x",
-    "@ag-grid-enterprise/sparklines": "28.x.x",
     "@ag-grid-enterprise/clipboard": "28.x.x",
     "@ag-grid-enterprise/column-tool-panel": "28.x.x",
+    "@ag-grid-enterprise/core": "28.x.x",
     "@ag-grid-enterprise/excel-export": "28.x.x",
     "@ag-grid-enterprise/filter-tool-panel": "28.x.x",
     "@ag-grid-enterprise/master-detail": "28.x.x",
     "@ag-grid-enterprise/menu": "28.x.x",
+    "@ag-grid-enterprise/multi-filter": "28.x.x",
     "@ag-grid-enterprise/range-selection": "28.x.x",
     "@ag-grid-enterprise/rich-select": "28.x.x",
     "@ag-grid-enterprise/row-grouping": "28.x.x",
     "@ag-grid-enterprise/set-filter": "28.x.x",
-    "@ag-grid-enterprise/multi-filter": "28.x.x",
     "@ag-grid-enterprise/side-bar": "28.x.x",
+    "@ag-grid-enterprise/sparklines": "28.x.x",
     "@ag-grid-enterprise/status-bar": "28.x.x",
     "@ag-grid-enterprise/viewport-row-model": "28.x.x",
     "mem": "^8.1.1"
