@@ -24,7 +24,7 @@ import { SideBarModule } from '@ag-grid-enterprise/side-bar'
 import { StatusBarModule } from '@ag-grid-enterprise/status-bar'
 import { useCallback, useState } from 'react'
 import mem from 'mem'
-import '@ag-grid-community/core/dist/styles/ag-grid.css';
+import '@ag-grid-community/core/dist/styles/ag-grid.css'
 
 ModuleRegistry.registerModules([
   ClientSideRowModelModule,
@@ -89,11 +89,11 @@ export const agGridDefaultOptions: GridOptions = {
 }
 
 function _installLicense(license?: string): void {
-  if(license && license.length > 0) {
-   LicenseManager.setLicenseKey(license)
+  if (license && license.length > 0) {
+    LicenseManager.setLicenseKey(license)
   }
 }
-export const installLicense = mem(_installLicense, );
+export const installLicense = mem(_installLicense)
 
 export interface IGridApi {
   api?: GridApi
@@ -105,13 +105,15 @@ export function useAgGrid(license?: string): IGridApi & { onGridReady: (event: G
     api: undefined,
     columnApi: undefined,
   })
-  const onGridReady = useCallback((params) => {
-    const { api, columnApi } = params
-    setGridApi({ api, columnApi })
-    setTimeout(() => api.sizeColumnsToFit(), 25)
-  }, [setGridApi])
+  const onGridReady = useCallback(
+    (params) => {
+      const { api, columnApi } = params
+      setGridApi({ api, columnApi })
+      setTimeout(() => api.sizeColumnsToFit(), 25)
+    },
+    [setGridApi]
+  )
   installLicense(license)
-  
 
   return {
     onGridReady,
