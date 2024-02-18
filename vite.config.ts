@@ -8,9 +8,9 @@ export default defineConfig({
     lib: {
       // Could also be a dictionary or array of multiple entry points
       entry: resolve(__dirname, 'lib/main.ts'),
-      name: 'hd-react-components',
+      name: 'lib',
       // the proper extensions will be added
-      fileName: 'hd-react-components',
+      fileName: 'index',
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

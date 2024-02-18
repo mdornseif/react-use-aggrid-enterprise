@@ -1,8 +1,8 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { AgGridReact } from '@ag-grid-community/react'
-import { agGridDefaultOptions, useAgGrid } from '../src/index.tsx'
 import { GridOptions } from '@ag-grid-community/core'
+import { useAgGrid, agGridDefaultOptions } from '../lib/useAgGrid'
 
 const LICENSE: string | undefined = import.meta?.env?.VITE_AGGRID_LICENSE_KEY
 

@@ -106,8 +106,8 @@ export function useAgGrid(license?: string): IGridApi & { onGridReady: (event: G
     columnApi: undefined,
   })
   const onGridReady = useCallback(
-    (params) => {
-      const { api, columnApi } = params
+    (event: GridReadyEvent) => {
+      const { api, columnApi } = event
       setGridApi({ api, columnApi })
       setTimeout(() => api.sizeColumnsToFit(), 25)
     },

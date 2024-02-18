@@ -9,8 +9,8 @@
   },
   "license": "MIT",
   "author": "Dr. Maximillian Dornseif",
-  "main": "dist/index.js",
-  "module": "dist/react-use-aggrid-enterprise.esm.js",
+  "main": "dist/index.mjs",
+  "module": "dist/index.umd.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
