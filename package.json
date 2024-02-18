@@ -1,6 +1,6 @@
 {
   "name": "react-use-aggrid-enterprise",
-  "version": "2.2.0",
+  "version": "29.0.0",
   "description": "Hook based initialization of AG-Grid Enterprise",
   "homepage": "https://github.com/mdornseif/react-use-aggrid-enterprise",
   "repository": {
@@ -25,7 +25,7 @@
     "test": "TZ=utc vitest run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "TZ=utc vitest watch",
-    "unimported": "npx unimported; npx findead src",
+    "unimported": "npx findead src ; npx unimported; npx depcheck",
     "update": "npx npm-check-updates --interactive"
   },
   "lint-staged": {
