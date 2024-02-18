@@ -1,6 +1,6 @@
 {
   "name": "react-use-aggrid-enterprise",
-  "version": "29.0.0",
+  "version": "29.1.0",
   "description": "Hook based initialization of AG-Grid Enterprise",
   "homepage": "https://github.com/mdornseif/react-use-aggrid-enterprise",
   "repository": {

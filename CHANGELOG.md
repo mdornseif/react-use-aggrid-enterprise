@@ -1,3 +1,13 @@
+# [29.1.0](https://github.com/mdornseif/react-use-aggrid-enterprise/compare/v29.0.0...v29.1.0) (2024-02-18)
+
+### Bug Fixes
+
+- unified package.json ([24b164c](https://github.com/mdornseif/react-use-aggrid-enterprise/commit/24b164c660ca3a1d0183881757f2b04ea36385af))
+
+### Features
+
+- Move To AG-Grid 29. See https://blog.ag-grid.com/whats-new-in-ag-grid-29/ ([7e12fe8](https://github.com/mdornseif/react-use-aggrid-enterprise/commit/7e12fe82895052f0c5b5b414f00fee8414e061f9))
+
 # [2.2.0](https://github.com/mdornseif/react-use-aggrid-enterprise/compare/v2.1.1...v2.2.0) (2024-02-18)
 
 ### Bug Fixes
