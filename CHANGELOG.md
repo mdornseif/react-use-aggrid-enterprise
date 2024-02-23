@@ -1,3 +1,9 @@
+## [29.1.4](https://github.com/mdornseif/react-use-aggrid-enterprise/compare/v29.1.3...v29.1.4) (2024-02-23)
+
+### Bug Fixes
+
+- further optimize exports ([41491a9](https://github.com/mdornseif/react-use-aggrid-enterprise/commit/41491a9a4f4837abdd5b6516d985385648b70614))
+
 ## [29.1.3](https://github.com/mdornseif/react-use-aggrid-enterprise/compare/v29.1.2...v29.1.3) (2024-02-23)
 
 ### Bug Fixes
