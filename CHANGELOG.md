@@ -1,3 +1,9 @@
+## [29.1.6](https://github.com/mdornseif/react-use-aggrid-enterprise/compare/v29.1.5...v29.1.6) (2024-02-23)
+
+### Bug Fixes
+
+- correctly import useAgGrid() ([d439e72](https://github.com/mdornseif/react-use-aggrid-enterprise/commit/d439e723a27c9d8a2b9a77be5ed6dd74c9eebf9d))
+
 ## [29.1.5](https://github.com/mdornseif/react-use-aggrid-enterprise/compare/v29.1.4...v29.1.5) (2024-02-23)
 
 ### Bug Fixes
