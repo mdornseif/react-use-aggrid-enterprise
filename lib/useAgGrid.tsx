@@ -24,7 +24,7 @@ import { SideBarModule } from '@ag-grid-enterprise/side-bar'
 import { StatusBarModule } from '@ag-grid-enterprise/status-bar'
 import { useCallback, useState } from 'react'
 import mem from 'mem'
-import '@ag-grid-community/styles/ag-grid.css'
+// import '@ag-grid-community/styles/ag-grid.css'
 
 ModuleRegistry.registerModules([
   ClientSideRowModelModule,

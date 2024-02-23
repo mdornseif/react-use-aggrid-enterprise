@@ -12,9 +12,9 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
     },
     "./package.json": "./package.json"
   },
@@ -30,7 +30,7 @@
     "lint": "dts lint",
     "prepare": "husky",
     "preview": "vite preview",
-    "size": "npx vite-bundle-visualizer -t sunburst",
+    "size": "npx vite-bundle-visualizer -t sunburst # npx source-map-explorer dist/index.js ",
     "test": "TZ=utc vitest run",
     "test:coverage": "vitest run --coverage",
     "test:watch": "TZ=utc vitest watch",
@@ -113,7 +113,8 @@
     "vitest": "^1.3.0"
   },
   "peerDependencies": {
-    "react": ">=18"
+    "react": ">=18",
+    "react-dom": ">=18"
   },
   "engines": {
     "node": ">=18"
