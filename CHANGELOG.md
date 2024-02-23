@@ -1,3 +1,9 @@
+## [29.1.5](https://github.com/mdornseif/react-use-aggrid-enterprise/compare/v29.1.4...v29.1.5) (2024-02-23)
+
+### Bug Fixes
+
+- stop importing css at the library level ([54051c8](https://github.com/mdornseif/react-use-aggrid-enterprise/commit/54051c82357c1a890a4b172826a09d9668f4143e))
+
 ## [29.1.4](https://github.com/mdornseif/react-use-aggrid-enterprise/compare/v29.1.3...v29.1.4) (2024-02-23)
 
 ### Bug Fixes
