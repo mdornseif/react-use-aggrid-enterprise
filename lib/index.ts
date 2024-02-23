@@ -14,5 +14,6 @@ export {
   type GridApi,
   type GridOptions,
 } from '@ag-grid-community/core'
-export { type AgGridReact } from '@ag-grid-community/react'
+export { AgGridReact } from '@ag-grid-community/react'
 export { type AgGridReactProps, type AgReactUiProps } from '@ag-grid-community/react/lib/shared/interfaces'
+export { installLicense, useAgGrid } from './useAgGrid'
