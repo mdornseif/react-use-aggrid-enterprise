@@ -112,7 +112,7 @@
     "node": ">=18"
   },
   "tsup": {
-    "bundle": true,
+    "bundle": false,
     "dts": true,
     "entry": [
       "lib/index.ts"
