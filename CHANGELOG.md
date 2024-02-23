@@ -1,3 +1,9 @@
+## [29.1.3](https://github.com/mdornseif/react-use-aggrid-enterprise/compare/v29.1.2...v29.1.3) (2024-02-23)
+
+### Bug Fixes
+
+- tsup bundeling ([6d6c63d](https://github.com/mdornseif/react-use-aggrid-enterprise/commit/6d6c63d75dd5d806d9401abe113a07fc577d04e2))
+
 ## [29.1.2](https://github.com/mdornseif/react-use-aggrid-enterprise/compare/v29.1.1...v29.1.2) (2024-02-23)
 
 ### Bug Fixes
