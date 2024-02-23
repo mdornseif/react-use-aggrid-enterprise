@@ -1,3 +1,9 @@
+## [29.1.2](https://github.com/mdornseif/react-use-aggrid-enterprise/compare/v29.1.1...v29.1.2) (2024-02-23)
+
+### Bug Fixes
+
+- Export of typings ([d4326cb](https://github.com/mdornseif/react-use-aggrid-enterprise/commit/d4326cbaab0026e6cfaf4db238ab4fa5cfd75d54))
+
 ## [29.1.1](https://github.com/mdornseif/react-use-aggrid-enterprise/compare/v29.1.0...v29.1.1) (2024-02-23)
 
 ### Bug Fixes
