@@ -1,3 +1,10 @@
+## [29.1.1](https://github.com/mdornseif/react-use-aggrid-enterprise/compare/v29.1.0...v29.1.1) (2024-02-23)
+
+### Bug Fixes
+
+- export ESM only ([be3b177](https://github.com/mdornseif/react-use-aggrid-enterprise/commit/be3b177382f2531faad3b372b43ce2146aaad16b))
+- **size:** do not bundle ag-grid ([0a35742](https://github.com/mdornseif/react-use-aggrid-enterprise/commit/0a3574207c6be0992e80702215b1964d3b2c21f0))
+
 # [29.1.0](https://github.com/mdornseif/react-use-aggrid-enterprise/compare/v29.0.0...v29.1.0) (2024-02-18)
 
 ### Bug Fixes
