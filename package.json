@@ -10,13 +10,8 @@
   "license": "MIT",
   "author": "Dr. Maximillian Dornseif",
   "type": "module",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    },
-    "./package.json": "./package.json"
-  },
+  "exports": "dist/index.js",
+  "main": "dist/index..cjs",
   "module": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
@@ -117,13 +112,14 @@
     "node": ">=18"
   },
   "tsup": {
-    "bundle": false,
+    "bundle": true,
     "dts": true,
     "entry": [
       "lib/index.ts"
     ],
     "format": [
-      "esm"
+      "esm",
+      "cjs"
     ],
     "target": "esnext",
     "treeshake": true
